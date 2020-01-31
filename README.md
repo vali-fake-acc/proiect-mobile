@@ -7,6 +7,7 @@ Autor: Valentin Neagu
 Description: This app will help you get shit done. You still have to prioritise and execute though...
 
 Built for Android.
+
 Using: flask (python), javascript
 
 How to use:
