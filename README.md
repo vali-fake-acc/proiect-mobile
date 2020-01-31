@@ -8,7 +8,11 @@ Description: This app will help you get shit done. You still have to prioritise 
 
 Built for Android.
 
-Using: flask (python), javascript
-
+Using:
+  - python: flask, sqlalchemy, wtforms
+  - javascript: jquery
+  - bootstrap
+  - sqlite
+  
 How to use:
 cd into the project folder and execute 'python run.py'
