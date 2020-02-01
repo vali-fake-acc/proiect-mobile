@@ -1,6 +1,4 @@
-# proiect-mobile
-
-Project name: Get Shit Done
+# Get Shit Done
 
 Autor: Valentin Neagu
 
@@ -13,6 +11,8 @@ Using:
   - javascript: jquery
   - bootstrap
   - sqlite
-  
-How to use:
+
+## Usage
 cd into the project folder and execute 'python run.py'
+
+## License: BSD 3-Clause
