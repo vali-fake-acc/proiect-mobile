@@ -1,14 +1,13 @@
 # Get Shit Done
 
-Autor: Valentin Neagu
+Author: Valentin Neagu
 
-Description: This app will help you get shit done. You still have to prioritise and execute though...
+Description: This app will help you get shit done. You still have to prioritise and execute, though...
 
 Built for Android.
 
 Using:
   - python: flask, sqlalchemy, wtforms
-  - javascript: jquery
   - bootstrap
   - sqlite
 

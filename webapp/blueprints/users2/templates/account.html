@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="media">
+        <div class="media-body">
+            <h4 class="account-heading">{{ current_user.email }}</h4>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-4"><!-- empty space --></div>
+
+        <div class="content-section col-md-4">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Change your password</legend>
+                <div class="form-group">
+                    {{ form.current_password.label(class="form-control-label") }}
+                    {% if form.current_password.errors %}
+                        {{ form.current_password(class="form-control form-control-lg is-invalid") }}
+                    {% else %}
+                        {{ form.current_password(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.new_password.label(class="form-control-label") }}
+                    {% if form.new_password.errors %}
+                        {{ form.new_password(class="form-control form-control-lg is-invalid") }}
+                    {% else %}
+                        {{ form.new_password(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+
+                <div class="form-group">
+                    {{ form.confirm_new_password.label(class="form-control-label") }}
+                    {% if form.confirm_new_password.errors %}
+                        {{ form.confirm_new_password(class="form-control form-control-lg is-invalid") }}
+                    {% else %}
+                        {{ form.confirm_new_password(class="form-control form-control-lg") }}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+        </div>
+
+        <div class="col-md-4"><!-- empty space --></div>
+    </div>
+{% endblock content %}

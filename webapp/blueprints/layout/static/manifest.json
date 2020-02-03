@@ -1,0 +1,18 @@
+{
+  "name": "Get Shit Done!",
+  "short_name": "Get Shit Done!",
+  "description": "This app will help you get shit done. You still have to prioritise and execute, though...",
+  "theme_color": "transparent",
+  "background_color": "transparent",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "assets/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

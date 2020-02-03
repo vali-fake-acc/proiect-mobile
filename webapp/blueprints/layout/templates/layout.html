@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="theme-color" content="transparent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="manifest" href="{{ url_for('layout.static', filename='manifest.json') }}">
+	<link rel="icon" type="image/png" href="{{ url_for('layout.static', filename='assets/logo.png') }}">
+
+    {% include 'css.html' %}
+
+    {% if title %}
+        <title>Get Shit Done: {{ title }}</title>
+    {% else %}
+        <title>Get Shit Done</title>
+    {% endif %}
+</head>
+<body>
+    {% include 'nav.html' %}
+    <main role="main" class="container">
+        <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4"> <!-- empty space --></div>
+                <div class="col-md-4 message">
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+                        {% if messages %}
+                            {% for category, message in messages %}
+                            <div class="alert alert-{{ category }}">
+                                {{ message }}
+                            </div>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                </div>
+                <div class="col-md-4"> <!-- empty space --></div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-12">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    {% include 'js.html' %}
+</body>
+</html>

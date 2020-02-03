@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block content %}
+	<h3>{{ board.title }}</h3>
+	<hr>
+
+	{% for row in data.items %}
+		<a href="{{ url_for('main.card', id=row.id) }}">{{ row.title }}</a>
+		<hr>
+	{% endfor %}
+    <br>
+
+    {% for page in pages %}
+        {% if page %}
+            {% if data.page == page %}
+                <a href="{{ url_for('main.board', id_board=id_board, page=page) }}" class="btn btn-info md-1">{{ page }}</a>
+            {% else %}
+                <a href="{{ url_for('main.board', id_board=id_board, page=page) }}" class="btn btn-outline-info md-1">{{ page }}</a>
+            {% endif %}
+        {% else %}
+            ...
+        {% endif %}
+    {% endfor %}
+	<a class="btn btn-success" href="{{ url_for('main.create_card') }}">Create Card</a>
+	<a class="btn btn-info" href="{{ url_for('main.create_board', id=session.get('board')) }}">Edit Board</a>
+{% endblock content %}
+

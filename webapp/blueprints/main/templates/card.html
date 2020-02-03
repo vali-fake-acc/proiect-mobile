@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+	<h3>{{ card.title }}</h3>
+	<p>{{ card.description }}</p>
+
+	{% if card.image %}
+		<hr>
+		<img src="{{ url_for('main.static', filename='assets/image/' + card.image) }}">
+	{% endif %}
+
+	<hr>
+
+	<a class="btn btn-info" href="{{ url_for('main.create_card', id=card.id) }}">Edit</a>
+	<a class="btn btn-danger" href="{{ url_for('main.delete_card', id=card.id) }}">Delete</a>
+{% endblock content %}
+
