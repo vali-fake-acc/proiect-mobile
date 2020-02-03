@@ -8,6 +8,7 @@ Built for Android.
 Using:
   - python: flask, sqlalchemy, wtforms
   - bootstrap
+  - javascript
   - sqlite
 
 ## Usage
